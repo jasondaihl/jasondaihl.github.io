@@ -1,4 +1,5 @@
 ---
+import '../styles/quoin-tokens.css';
 import '../styles/global.css';
 
 interface Props {
@@ -31,12 +32,21 @@ const ogImage = 'https://www.gravatar.com/avatar/35379cebfed703bdf440b3776b93920
     <meta name="twitter:image" content={ogImage} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <!--
+      quoin themes via a data-theme attribute, not prefers-color-scheme.
+      Mirror the OS preference onto <html> before paint so dark mode still
+      follows the system automatically. Inlined to avoid a flash.
+    -->
+    <script is:inline>
+      (() => {
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        const apply = () => {
+          document.documentElement.dataset.theme = mq.matches ? 'dark' : 'light';
+        };
+        apply();
+        mq.addEventListener('change', apply);
+      })();
+    </script>
   </head>
   <body>
     <slot />

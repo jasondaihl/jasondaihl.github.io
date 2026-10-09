@@ -1,0 +1,208 @@
+/*
+ * Vendored from the quoin design system — @jasondaihl/quoin-tokens v0.5.0
+ * Source: packages/tokens/dist/tokens.css (https://github.com/jasondaihl/quoin)
+ *
+ * This is a temporary copy. When @jasondaihl/quoin-tokens is published,
+ * delete this file and import "@jasondaihl/quoin-tokens/tokens.css" instead.
+ * Do not hand-edit — regenerate from quoin and re-copy.
+ */
+
+:root {
+  --quoin-space-0: 0;
+  --quoin-space-1: 2px;
+  --quoin-space-2: 4px;
+  --quoin-space-3: 8px;
+  --quoin-space-4: 12px;
+  --quoin-space-5: 16px;
+  --quoin-space-6: 20px;
+  --quoin-space-7: 24px;
+  --quoin-space-8: 32px;
+  --quoin-space-9: 40px;
+  --quoin-space-10: 48px;
+  --quoin-space-12: 64px;
+  --quoin-radius-none: 0;
+  --quoin-radius-sm: 4px;
+  --quoin-radius-md: 8px;
+  --quoin-radius-lg: 12px;
+  --quoin-radius-xl: 16px;
+  --quoin-radius-full: 9999px;
+  --quoin-border-width-none: 0;
+  --quoin-border-width-thin: 1px;
+  --quoin-border-width-thick: 2px;
+  --quoin-palette-white: #ffffff;
+  --quoin-palette-black: #000000;
+  --quoin-palette-neutral-0: #ffffff;
+  --quoin-palette-neutral-50: #fafafa;
+  --quoin-palette-neutral-100: #f4f4f5;
+  --quoin-palette-neutral-200: #e4e4e7;
+  --quoin-palette-neutral-300: #d4d4d8;
+  --quoin-palette-neutral-400: #a1a1aa;
+  --quoin-palette-neutral-500: #71717a;
+  --quoin-palette-neutral-600: #52525b;
+  --quoin-palette-neutral-700: #3f3f46;
+  --quoin-palette-neutral-800: #27272a;
+  --quoin-palette-neutral-900: #18181b;
+  --quoin-palette-neutral-950: #09090b;
+  --quoin-palette-indigo-50: #eef2ff;
+  --quoin-palette-indigo-100: #e0e7ff;
+  --quoin-palette-indigo-200: #c7d2fe;
+  --quoin-palette-indigo-300: #a5b4fc;
+  --quoin-palette-indigo-400: #818cf8;
+  --quoin-palette-indigo-500: #6366f1;
+  --quoin-palette-indigo-600: #4f46e5;
+  --quoin-palette-indigo-700: #4338ca;
+  --quoin-palette-indigo-800: #3730a3;
+  --quoin-palette-indigo-900: #312e81;
+  --quoin-palette-cyan-50: #ecfeff;
+  --quoin-palette-cyan-100: #cffafe;
+  --quoin-palette-cyan-200: #a5f3fc;
+  --quoin-palette-cyan-300: #67e8f9;
+  --quoin-palette-cyan-400: #22d3ee;
+  --quoin-palette-cyan-500: #06b6d4;
+  --quoin-palette-cyan-600: #0891b2;
+  --quoin-palette-cyan-700: #0e7490;
+  --quoin-palette-cyan-800: #155e75;
+  --quoin-palette-cyan-900: #164e63;
+  --quoin-palette-orange-50: #fff7ed;
+  --quoin-palette-orange-100: #ffedd5;
+  --quoin-palette-orange-200: #fed7aa;
+  --quoin-palette-orange-300: #fdba74;
+  --quoin-palette-orange-400: #fb923c;
+  --quoin-palette-orange-500: #f97316;
+  --quoin-palette-orange-600: #ea580c;
+  --quoin-palette-orange-700: #c2410c;
+  --quoin-palette-orange-800: #9a3412;
+  --quoin-palette-orange-900: #7c2d12;
+  --quoin-palette-emerald-50: #ecfdf5;
+  --quoin-palette-emerald-100: #d1fae5;
+  --quoin-palette-emerald-200: #a7f3d0;
+  --quoin-palette-emerald-300: #6ee7b7;
+  --quoin-palette-emerald-400: #34d399;
+  --quoin-palette-emerald-500: #10b981;
+  --quoin-palette-emerald-600: #059669;
+  --quoin-palette-emerald-700: #047857;
+  --quoin-palette-emerald-800: #065f46;
+  --quoin-palette-emerald-900: #064e3b;
+  --quoin-palette-red-400: #f87171;
+  --quoin-palette-red-500: #ef4444;
+  --quoin-palette-red-600: #dc2626;
+  --quoin-palette-red-700: #b91c1c;
+  --quoin-palette-green-400: #4ade80;
+  --quoin-palette-green-500: #22c55e;
+  --quoin-palette-green-600: #16a34a;
+  --quoin-palette-amber-400: #fbbf24;
+  --quoin-palette-amber-500: #f59e0b;
+  --quoin-shadow-sm: 0 1px 2px 0 rgba(9, 9, 11, 0.05);
+  --quoin-shadow-md: 0 2px 4px -1px rgba(9, 9, 11, 0.1), 0 1px 2px -1px rgba(9, 9, 11, 0.06);
+  --quoin-shadow-lg: 0 10px 15px -3px rgba(9, 9, 11, 0.1), 0 4px 6px -4px rgba(9, 9, 11, 0.05);
+  --quoin-font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --quoin-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  --quoin-font-size-xs: 12px;
+  --quoin-font-size-sm: 14px;
+  --quoin-font-size-md: 16px;
+  --quoin-font-size-lg: 18px;
+  --quoin-font-size-xl: 20px;
+  --quoin-font-size-2xl: 24px;
+  --quoin-font-size-3xl: 30px;
+  --quoin-font-weight-regular: 400;
+  --quoin-font-weight-medium: 500;
+  --quoin-font-weight-semibold: 600;
+  --quoin-font-weight-bold: 700;
+  --quoin-line-height-tight: 1.2;
+  --quoin-line-height-snug: 1.35;
+  --quoin-line-height-normal: 1.5;
+  --quoin-line-height-relaxed: 1.65;
+  --quoin-color-bg-default: #ffffff;
+  --quoin-color-bg-subtle: #fafafa;
+  --quoin-color-surface-default: #ffffff;
+  --quoin-color-surface-raised: #ffffff;
+  --quoin-color-text-default: #18181b;
+  --quoin-color-text-muted: #71717a;
+  --quoin-color-text-on-accent: #ffffff;
+  --quoin-color-text-on-danger: #ffffff;
+  --quoin-color-border-default: #e4e4e7;
+  --quoin-color-border-strong: #71717a;
+  --quoin-color-accent-default: #4f46e5;
+  --quoin-color-accent-hover: #4338ca;
+  --quoin-color-accent-active: #3730a3;
+  --quoin-color-accent-subtle: #eef2ff;
+  --quoin-color-focus-ring: #6366f1;
+  --quoin-color-danger-default: #dc2626;
+  --quoin-color-danger-hover: #b91c1c;
+  --quoin-color-success-default: #16a34a;
+}
+
+[data-theme="dark"] {
+  --quoin-color-bg-default: #09090b;
+  --quoin-color-bg-subtle: #18181b;
+  --quoin-color-surface-default: #18181b;
+  --quoin-color-surface-raised: #27272a;
+  --quoin-color-text-default: #fafafa;
+  --quoin-color-text-muted: #a1a1aa;
+  --quoin-color-text-on-accent: #ffffff;
+  --quoin-color-text-on-danger: #ffffff;
+  --quoin-color-border-default: #27272a;
+  --quoin-color-border-strong: #71717a;
+  --quoin-color-accent-default: #4f46e5;
+  --quoin-color-accent-hover: #6366f1;
+  --quoin-color-accent-active: #818cf8;
+  --quoin-color-accent-subtle: #312e81;
+  --quoin-color-focus-ring: #818cf8;
+  --quoin-color-danger-default: #dc2626;
+  --quoin-color-danger-hover: #b91c1c;
+  --quoin-color-success-default: #22c55e;
+}
+
+[data-brand="ocean"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #0891b2;
+  --quoin-color-accent-hover: #0e7490;
+  --quoin-color-accent-active: #155e75;
+  --quoin-color-accent-subtle: #ecfeff;
+  --quoin-color-focus-ring: #0891b2;
+}
+
+[data-brand="ocean"][data-theme="dark"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #06b6d4;
+  --quoin-color-accent-hover: #22d3ee;
+  --quoin-color-accent-active: #67e8f9;
+  --quoin-color-accent-subtle: #164e63;
+  --quoin-color-focus-ring: #22d3ee;
+}
+
+[data-brand="sunset"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #ea580c;
+  --quoin-color-accent-hover: #c2410c;
+  --quoin-color-accent-active: #9a3412;
+  --quoin-color-accent-subtle: #fff7ed;
+  --quoin-color-focus-ring: #ea580c;
+}
+
+[data-brand="sunset"][data-theme="dark"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #f97316;
+  --quoin-color-accent-hover: #fb923c;
+  --quoin-color-accent-active: #fdba74;
+  --quoin-color-accent-subtle: #7c2d12;
+  --quoin-color-focus-ring: #fb923c;
+}
+
+[data-brand="forest"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #059669;
+  --quoin-color-accent-hover: #047857;
+  --quoin-color-accent-active: #065f46;
+  --quoin-color-accent-subtle: #ecfdf5;
+  --quoin-color-focus-ring: #059669;
+}
+
+[data-brand="forest"][data-theme="dark"] {
+  --quoin-color-text-on-accent: #09090b;
+  --quoin-color-accent-default: #10b981;
+  --quoin-color-accent-hover: #34d399;
+  --quoin-color-accent-active: #6ee7b7;
+  --quoin-color-accent-subtle: #064e3b;
+  --quoin-color-focus-ring: #34d399;
+}

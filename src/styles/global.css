@@ -1,78 +1,20 @@
 /* ==========================================================================
-   Design Tokens
+   Styling — consumes the quoin design system's tokens directly.
+
+   Token layer lives in quoin-tokens.css (vendored from @jasondaihl/quoin-tokens).
+   This file references quoin's semantic tokens (--quoin-color-*, --quoin-space-*,
+   etc.) only — there is no site-local token layer. Theming/dark mode is owned by
+   quoin; see the data-theme bridge in Base.astro.
    ========================================================================== */
 
+/* color-scheme follows the data-theme attribute the bridge sets, so native
+   form controls, scrollbars, and the like match quoin's theme. */
 :root {
-  /* Color primitives */
-  --ds-color-neutral-0: #ffffff;
-  --ds-color-neutral-50: #f8f9fa;
-  --ds-color-neutral-200: #d1d5db;
-  --ds-color-neutral-400: #9ca3af;
-  --ds-color-neutral-600: #6b7280;
-  --ds-color-neutral-800: #1f2937;
-  --ds-color-neutral-900: #111827;
-  --ds-color-neutral-950: #0a0f1a;
-  --ds-color-accent-300: #93c5fd;
-  --ds-color-accent-400: #60a5fa;
-  --ds-color-accent-500: #2563eb;
-  --ds-color-accent-600: #1d4ed8;
-  --ds-color-accent-700: #1e40af;
-
-  /* Spacing scale (4px base) */
-  --ds-space-1: 0.25rem;
-  --ds-space-2: 0.5rem;
-  --ds-space-3: 0.75rem;
-  --ds-space-4: 1rem;
-  --ds-space-6: 1.5rem;
-  --ds-space-8: 2rem;
-  --ds-space-12: 3rem;
-  --ds-space-16: 4rem;
-  --ds-space-24: 6rem;
-
-  /* Typography scale */
-  --ds-font-size-sm: 0.875rem;
-  --ds-font-size-base: 1.0625rem;
-  --ds-font-size-lg: 1.25rem;
-  --ds-font-size-xl: 1.5rem;
-  --ds-font-size-2xl: 2rem;
-  --ds-font-size-3xl: 2.5rem;
-
-  --ds-line-height-tight: 1.2;
-  --ds-line-height-base: 1.6;
-
-  --ds-font-weight-normal: 400;
-  --ds-font-weight-medium: 500;
-  --ds-font-weight-semibold: 600;
-
-  --ds-font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, sans-serif;
-
-  /* Radii */
-  --ds-radius-sm: 0.25rem;
-
-  /* Semantic tokens */
   color-scheme: light;
-  --color-text-primary: var(--ds-color-neutral-900);
-  --color-text-secondary: var(--ds-color-neutral-600);
-  --color-text-link: var(--ds-color-accent-600);
-  --color-text-link-hover: var(--ds-color-accent-700);
-  --color-bg-page: var(--ds-color-neutral-0);
-  --color-border-default: var(--ds-color-neutral-200);
-  --color-focus-ring: var(--ds-color-accent-500);
 }
 
-/* Dark theme: remap semantic tokens only — primitives are unchanged. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-text-primary: var(--ds-color-neutral-50);
-    --color-text-secondary: var(--ds-color-neutral-400);
-    --color-text-link: var(--ds-color-accent-400);
-    --color-text-link-hover: var(--ds-color-accent-300);
-    --color-bg-page: var(--ds-color-neutral-950);
-    --color-border-default: var(--ds-color-neutral-800);
-    --color-focus-ring: var(--ds-color-accent-400);
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 /* ==========================================================================
@@ -96,12 +38,12 @@ html {
 }
 
 body {
-  font-family: var(--ds-font-family-sans);
-  font-size: var(--ds-font-size-base);
-  font-weight: var(--ds-font-weight-normal);
-  line-height: var(--ds-line-height-base);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-page);
+  font-family: var(--quoin-font-family-sans);
+  font-size: var(--quoin-font-size-md);
+  font-weight: var(--quoin-font-weight-regular);
+  line-height: var(--quoin-line-height-relaxed);
+  color: var(--quoin-color-text-default);
+  background-color: var(--quoin-color-bg-default);
 }
 
 /* ==========================================================================
@@ -111,13 +53,13 @@ body {
 main {
   max-width: 40rem;
   margin: 0 auto;
-  padding: var(--ds-space-8) var(--ds-space-6);
+  padding: var(--quoin-space-8) var(--quoin-space-7);
 }
 
 header {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-6);
+  gap: var(--quoin-space-7);
 }
 
 /* ==========================================================================
@@ -125,36 +67,36 @@ header {
    ========================================================================== */
 
 .avatar {
-  border-radius: 50%;
+  border-radius: var(--quoin-radius-full);
   flex-shrink: 0;
 }
 
 h1 {
-  font-size: var(--ds-font-size-2xl);
-  font-weight: var(--ds-font-weight-semibold);
-  line-height: var(--ds-line-height-tight);
+  font-size: var(--quoin-font-size-3xl);
+  font-weight: var(--quoin-font-weight-semibold);
+  line-height: var(--quoin-line-height-tight);
   letter-spacing: -0.01em;
-  color: var(--color-text-primary);
+  color: var(--quoin-color-text-default);
 }
 
 .title {
-  font-size: var(--ds-font-size-xl);
-  font-weight: var(--ds-font-weight-normal);
-  line-height: var(--ds-line-height-tight);
-  color: var(--color-text-secondary);
-  margin-top: var(--ds-space-2);
+  font-size: var(--quoin-font-size-2xl);
+  font-weight: var(--quoin-font-weight-regular);
+  line-height: var(--quoin-line-height-tight);
+  color: var(--quoin-color-text-muted);
+  margin-top: var(--quoin-space-3);
 }
 
 .subtitle {
-  font-size: var(--ds-font-size-lg);
-  font-weight: var(--ds-font-weight-normal);
-  line-height: var(--ds-line-height-tight);
-  color: var(--color-text-secondary);
-  margin-top: var(--ds-space-1);
+  font-size: var(--quoin-font-size-xl);
+  font-weight: var(--quoin-font-weight-regular);
+  line-height: var(--quoin-line-height-tight);
+  color: var(--quoin-color-text-muted);
+  margin-top: var(--quoin-space-2);
 }
 
 .statement {
-  color: var(--color-text-primary);
+  color: var(--quoin-color-text-default);
 }
 
 /* ==========================================================================
@@ -162,11 +104,11 @@ h1 {
    ========================================================================== */
 
 section {
-  margin-top: var(--ds-space-8);
+  margin-top: var(--quoin-space-8);
 }
 
 nav {
-  margin-top: var(--ds-space-8);
+  margin-top: var(--quoin-space-8);
 }
 
 /* ==========================================================================
@@ -174,16 +116,16 @@ nav {
    ========================================================================== */
 
 a {
-  color: var(--color-text-link);
+  color: var(--quoin-color-accent-default);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--quoin-font-weight-medium);
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--color-text-link-hover);
+  color: var(--quoin-color-accent-hover);
 }
 
 .link-list {
@@ -191,13 +133,13 @@ a:hover {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--ds-space-6);
+  gap: var(--quoin-space-7);
 }
 
 .link-list a {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-2);
+  gap: var(--quoin-space-3);
   text-decoration: none;
 }
 
@@ -219,9 +161,9 @@ a:hover {
    ========================================================================== */
 
 :focus-visible {
-  outline: 2px solid var(--color-focus-ring);
+  outline: 2px solid var(--quoin-color-focus-ring);
   outline-offset: 2px;
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--quoin-radius-sm);
 }
 
 /* ==========================================================================
@@ -230,10 +172,6 @@ a:hover {
 
 @media (min-width: 640px) {
   main {
-    padding: var(--ds-space-24) var(--ds-space-6);
-  }
-
-  h1 {
-    font-size: var(--ds-font-size-3xl);
+    padding: var(--quoin-space-12) var(--quoin-space-7);
   }
 }
