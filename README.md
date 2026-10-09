@@ -15,15 +15,19 @@ Built with [Astro](https://astro.build) as a static site.
 
 ## Design tokens
 
-Styles are driven by a two-tier token system in `src/styles/global.css`:
+Styling is driven by the [quoin](https://github.com/jasondaihl/quoin) design
+system's tokens (`--quoin-*`). The site's own CSS in `src/styles/global.css`
+references quoin's semantic tokens only — there is no site-local token layer.
 
-- **Primitives** (`--ds-*`) — the raw palette, spacing, type, and radii scales.
-- **Semantic tokens** (`--color-*`) — intent-based variables that map to primitives.
+- `src/styles/quoin-tokens.css` — the token layer, **vendored** from
+  `@jasondaihl/quoin-tokens` v0.5.0. This is a temporary copy; once that package
+  is published, delete this file and import `@jasondaihl/quoin-tokens/tokens.css`.
+- `src/styles/global.css` — component styling, referencing `--quoin-*` tokens.
 
-Components only reference semantic tokens, so theming is a matter of remapping
-that layer. Dark mode is implemented exactly this way: a
-`@media (prefers-color-scheme: dark)` block repoints the semantic tokens at
-different primitives, leaving the component CSS untouched.
+Dark mode and multi-brand theming are owned by quoin via `data-theme` /
+`data-brand` attributes. Because quoin themes by attribute rather than
+`prefers-color-scheme`, a small inlined script in `Base.astro` mirrors the OS
+preference onto `<html data-theme>` so dark mode still follows the system.
 
 ## Development
 
